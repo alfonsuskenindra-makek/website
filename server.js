@@ -1,0 +1,1 @@
+const express=require('express');const app=express();app.use(express.static('public'));app.get('/',(r,s)=>s.sendFile(__dirname+'/views/index.html'));['getaran','gelombang','bunyi','cermin'].forEach(p=>app.get('/'+p,(r,s)=>s.sendFile(__dirname+'/views/'+p+'.html')));app.listen(3000);
